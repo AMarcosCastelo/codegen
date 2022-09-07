@@ -1,17 +1,13 @@
 import { jest, expect } from '@jest/globals';
 
-import {
-  repositoryTemplate,
-  serviceTemplate,
-  factoryTemplate
-} from '../';
+import { repositoryTemplate, serviceTemplate, factoryTemplate } from '../';
 import {
   productRepositoryStub,
   productServiceStub,
-  productFactoryStub
+  productFactoryStub,
 } from '../../test/unit/stubs';
 
-describe("#Codegen 3-layers arch", () => {
+describe('#Codegen 3-layers arch', () => {
   const componentName = 'product';
   const repositoryName = `${componentName}Repository`;
   const serviceName = `${componentName}Service`;
@@ -21,10 +17,10 @@ describe("#Codegen 3-layers arch", () => {
     jest.clearAllMocks();
   });
 
-  it("#should generate repository template", () => {
+  it('#should generate repository template', () => {
     const expected = {
       fileName: repositoryName,
-      template: productRepositoryStub
+      template: productRepositoryStub,
     };
 
     const result = repositoryTemplate(componentName);
@@ -32,10 +28,10 @@ describe("#Codegen 3-layers arch", () => {
     expect(result).toStrictEqual(expected);
   });
 
-  it("#should generate service template", () => {
+  it('#should generate service template', () => {
     const expected = {
       fileName: serviceName,
-      template: productServiceStub
+      template: productServiceStub,
     };
 
     const result = serviceTemplate(componentName, repositoryName);
@@ -43,11 +39,11 @@ describe("#Codegen 3-layers arch", () => {
     expect(result).toStrictEqual(expected);
   });
 
-  it("#should generate factory template", () => {
+  it('#should generate factory template', () => {
     const factoryName = `${componentName}Factory`;
     const expected = {
       fileName: factoryName,
-      template: productFactoryStub
+      template: productFactoryStub,
     };
 
     const result = factoryTemplate(componentName, repositoryName, serviceName);

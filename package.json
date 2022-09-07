@@ -8,12 +8,23 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand --no-cache",
     "test:cov": "yarn test --coverage",
     "test:watch": "yarn test --watchAll",
-    "test:changed": "jest --onlyChanged"
+    "test:changed": "jest --onlyChanged",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^29.0.2"
+    "eslint": "8.23.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-jest": "27.0.1",
+    "husky": "6",
+    "jest": "29.0.2",
+    "lint-staged": "10",
+    "prettier": "2.7.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }

@@ -1,4 +1,4 @@
-import { StringUtils } from "../utils";
+import { StringUtils } from '../utils';
 
 const componentNameAnchor = '$$componentName';
 
@@ -29,8 +29,7 @@ export function repositoryTemplate(componentName) {
     fileName: `${componentName}Repository`,
     template: template.replaceAll(
       componentNameAnchor,
-      StringUtils.upperCaseFirstLetter(componentName)
-    )
-  }
-};
-
+      StringUtils.upperCaseFirstLetter(componentName),
+    ),
+  };
+}

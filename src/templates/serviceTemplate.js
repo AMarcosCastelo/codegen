@@ -1,4 +1,4 @@
- import { StringUtils } from "../utils";
+import { StringUtils } from '../utils';
 
 const componentNameAnchor = '$$componentName';
 const currentContextAnchor = '$$currentContextName';
@@ -26,17 +26,19 @@ const template = `
       return this.$$currentContextName.delete(id);
     };
   }
-`
+`;
 
 export function serviceTemplate(componentName, repositoryName) {
   const txtFile = template
-    .replaceAll(componentNameAnchor, StringUtils.upperCaseFirstLetter(componentName))
+    .replaceAll(
+      componentNameAnchor,
+      StringUtils.upperCaseFirstLetter(componentName),
+    )
     .replaceAll(currentContextAnchor, repositoryName)
-    .replaceAll(repositoryAnchor, repositoryName)
+    .replaceAll(repositoryAnchor, repositoryName);
 
   return {
     fileName: `${componentName}Service`,
     template: txtFile,
-  }
-};
-
+  };
+}
