@@ -1,0 +1,19 @@
+{
+  "name": "@AMarcosCastelo/code-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand --no-cache",
+    "test:cov": "yarn test --coverage",
+    "test:watch": "yarn test --watchAll",
+    "test:changed": "jest --onlyChanged"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.0.2"
+  }
+}
