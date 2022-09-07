@@ -1,5 +1,9 @@
+import { StringUtils } from "../utils";
+
+const componentNameAnchor = '$$componentName';
+
 const template = `
-  export default class Repository {
+  export default class $$componentNameRepository {
     constructor() {};
 
     create(data) {
@@ -21,5 +25,12 @@ const template = `
 `;
 
 export function repositoryTemplate(componentName) {
+  return {
+    fileName: `${componentName}Repository`,
+    template: template.replaceAll(
+      componentNameAnchor,
+      StringUtils.upperCaseFirstLetter(componentName)
+    )
+  }
+};
 
-}
