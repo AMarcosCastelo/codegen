@@ -4,12 +4,12 @@ import {
   repositoryTemplate,
   serviceTemplate,
   factoryTemplate
-} from '../../src/templates';
+} from '../';
 import {
   productRepositoryStub,
   productServiceStub,
   productFactoryStub
-} from './stubs';
+} from '../../test/unit/stubs';
 
 describe("#Codegen 3-layers arch", () => {
   const componentName = 'product';

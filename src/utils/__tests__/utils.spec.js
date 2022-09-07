@@ -1,4 +1,4 @@
-import { StringUtils } from '../../src/utils';
+import { StringUtils } from '../';
 
 describe("#Utils - Strings", () => {
   describe('#upperCaseFirstLetter', () => {
@@ -7,6 +7,7 @@ describe("#Utils - Strings", () => {
       { input: "t", output: "T"},
       { input: "Test", output: "Test"},
       { input: "", output: ""},
+      { input: null, output: ""},
     ])('should return the first letter in upperCase', ({ input, output }) => {
       expect(StringUtils.upperCaseFirstLetter(input)).toBe(output);
     });
@@ -18,6 +19,7 @@ describe("#Utils - Strings", () => {
       { input: "T", output: "t"},
       { input: "Test", output: "test"},
       { input: "", output: ""},
+      { input: null, output: ""},
     ])('should return the first letter in upperCase', ({ input, output }) => {
       expect(StringUtils.lowerCaseFirstLetter(input)).toBe(output);
     });
