@@ -1,3 +1,9 @@
-export * from './factoryTemplate';
-export * from './repositoryTemplate';
-export * from './serviceTemplate';
+import { factoryTemplate } from './factoryTemplate';
+import { repositoryTemplate } from './repositoryTemplate';
+import { serviceTemplate } from './serviceTemplate';
+
+export default {
+  factoryTemplate,
+  repositoryTemplate,
+  serviceTemplate,
+};

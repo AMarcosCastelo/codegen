@@ -1,5 +1,5 @@
 export class StringUtils {
-  static #transform({ str: [first, ...rest], upperCase = true }) {
+  static #transform({ str: [first, ...rest], upperCase = true } = {}) {
     if (!first) return '';
 
     const firstLetter = upperCase ? first?.toUpperCase() : first?.toLowerCase();

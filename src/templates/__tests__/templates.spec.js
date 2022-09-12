@@ -1,6 +1,6 @@
 import { jest, expect } from '@jest/globals';
 
-import { repositoryTemplate, serviceTemplate, factoryTemplate } from '../';
+import templates from '../';
 import {
   productRepositoryStub,
   productServiceStub,
@@ -23,7 +23,7 @@ describe('#Codegen 3-layers arch', () => {
       template: productRepositoryStub,
     };
 
-    const result = repositoryTemplate(componentName);
+    const result = templates.repositoryTemplate(componentName);
 
     expect(result).toStrictEqual(expected);
   });
@@ -34,7 +34,7 @@ describe('#Codegen 3-layers arch', () => {
       template: productServiceStub,
     };
 
-    const result = serviceTemplate(componentName, repositoryName);
+    const result = templates.serviceTemplate(componentName, repositoryName);
 
     expect(result).toStrictEqual(expected);
   });
@@ -46,7 +46,11 @@ describe('#Codegen 3-layers arch', () => {
       template: productFactoryStub,
     };
 
-    const result = factoryTemplate(componentName, repositoryName, serviceName);
+    const result = templates.factoryTemplate(
+      componentName,
+      repositoryName,
+      serviceName,
+    );
 
     expect(result).toStrictEqual(expected);
   });
