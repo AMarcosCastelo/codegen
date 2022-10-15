@@ -5,14 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand --no-cache",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --no-cache",
     "test:cov": "yarn test --coverage",
     "test:watch": "yarn test --watchAll",
     "test:changed": "jest --onlyChanged",
     "prepare": "husky install"
   },
   "keywords": [],
-  "author": "",
+  "author": "AMarcosCastelo",
   "license": "ISC",
   "devDependencies": {
     "eslint": "8.23.0",
