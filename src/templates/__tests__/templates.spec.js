@@ -7,7 +7,7 @@ import {
   productFactoryStub,
 } from '../../test/unit/stubs';
 
-describe('#Codegen 3-layers arch', () => {
+describe('#code-generator 3-layers arch', () => {
   const componentName = 'product';
   const repositoryName = `${componentName}Repository`;
   const serviceName = `${componentName}Service`;

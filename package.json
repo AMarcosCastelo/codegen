@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "code-generator": "./src/index.mjs"
+  },
   "scripts": {
+    "start": "NODE_OPTIONS=--experimental-vm-modules NODE_ENV=dev node src/index.mjs",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --no-cache",
     "test:cov": "yarn test --coverage",
     "test:watch": "yarn test --watchAll",
@@ -26,5 +30,8 @@
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "yargs": "17.6.0"
   }
 }
